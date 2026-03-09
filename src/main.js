@@ -16,7 +16,9 @@ import { Modal } from './blocks/modal/modal.js';
     const addBtn = document.getElementById('addTaskBtn');
     const modalElement = document.getElementById('taskModal');
     const reminderListEl = document.getElementById('reminderList');
-
+    console.log('addBtn:', addBtn);
+    console.log('modalElement:', modalElement);
+    console.log('Modal class:', Modal);
     const modal = new Modal(modalElement);
 
     function renderTasks() {
