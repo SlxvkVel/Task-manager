@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Менеджер задач</title>
+  <script type="module" crossorigin src="./assets/index-DGTdH312.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-BhQEexr1.css">
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <h1 class="header__title">Менеджер задач</h1>
+            <button class="button button--primary" id="addTaskBtn">+ Добавить задачу</button>
+        </header>
+
+        <div class="main-layout">
+            <aside class="sidebar">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="active">Активные</button>
+                    <button class="filter-btn" data-filter="completed">Выполненные</button>
+                </div>
+                <!-- Блок погоды удалён -->
+            </aside>
+
+            <main class="content">
+                <section class="task-list" id="taskList">
+                    <!-- карточки задач будут здесь -->
+                </section>
+            </main>
+
+            <aside class="reminders-panel">
+                <h3>Напоминания</h3>
+                <ul class="reminders-list" id="reminderList"></ul>
+            </aside>
+        </div>
+
+        <!-- Модальное окно для задачи -->
+        <div class="modal" id="taskModal">
+            <div class="modal__content">
+                <span class="modal__close">&times;</span>
+                <h2 id="modalTitle">Новая задача</h2>
+                <form id="taskForm">
+                    <input type="text" id="taskTitle" placeholder="Название" required>
+                    <textarea id="taskDesc" placeholder="Описание" rows="3"></textarea>
+                    <label>
+                        Срок выполнения:
+                        <input type="datetime-local" id="taskDueDate">
+                    </label>
+                    <label>
+                        Напомнить:
+                        <input type="datetime-local" id="taskReminder">
+                    </label>
+                    <input type="hidden" id="taskId">
+                    <div class="form-actions">
+                        <button type="submit" class="button button--primary">Сохранить</button>
+                        <button type="button" class="button" id="cancelModal">Отмена</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
